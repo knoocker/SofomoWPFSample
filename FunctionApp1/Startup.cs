@@ -1,6 +1,6 @@
-﻿using FunctionApp1.DependencyInjection;
-using FunctionApp1.Functions;
-using FunctionApp1.TableProcessor;
+﻿using SofomoServer.DependencyInjection;
+using SofomoServer.Functions;
+using SofomoServer.TableProcessor;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,9 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-[assembly: FunctionsStartup(typeof(FunctionApp1.Startup))]
+[assembly: FunctionsStartup(typeof(SofomoServer.Startup))]
 
-namespace FunctionApp1
+namespace SofomoServer
 {
     internal class Startup : FunctionsStartup
     {

@@ -1,4 +1,4 @@
-﻿using FunctionApp1.DataModels;
+﻿using SofomoServer.DataModels;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FunctionApp1.DependencyInjection
+namespace SofomoServer.DependencyInjection
 {
     internal static class ConfigurationServiceCollectionExtensions
     {

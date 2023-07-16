@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using SofomoWpfApp1.Services;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -9,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace SofomoWpfApp1
+namespace SofomoClient
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -18,26 +17,7 @@ namespace SofomoWpfApp1
     {
 
         
-        public IServiceProvider ServiceProvider { get; private set; }
-
-        protected override void OnStartup(StartupEventArgs e)
-        {
-        
-            var serviceCollection = new ServiceCollection();
-            ConfigureServices(serviceCollection);
-
-            ServiceProvider = serviceCollection.BuildServiceProvider();
-
-            var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
-            mainWindow.Show();
-        }
-
-        private void ConfigureServices(IServiceCollection services)
-        {
-            services.AddTransient<IReportsService, ReportsService>();
-
-            services.AddTransient(typeof(MainWindow));
-        }
+ 
 
 
 

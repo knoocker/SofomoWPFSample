@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using SofomoWpfApp1.DataModels;
-using SofomoWpfApp1.Tools;
+using SofomoClient.ServerFacade.DataModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +19,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 
-namespace SofomoWpfApp1.Components
+namespace SofomoClient.Components
 {
     /// <summary>
     /// Interaction logic for IpAdresReportView.xaml
@@ -38,12 +37,12 @@ namespace SofomoWpfApp1.Components
         public void SetIpAddressView(IpAddressReport ipAddressReport)
         {
             mainGrid.Visibility = Visibility.Visible;
+            region.Content = ipAddressReport.Region;
+
+
+            city.Content = ipAddressReport.City;
+             country.Content = ipAddressReport.Country;
             dynamic parsedJson = JsonConvert.DeserializeObject(ipAddressReport.Content);
-            region.Content = parsedJson.region_name;
-
-
-            city.Content = parsedJson.city;
-             country.Content = parsedJson.country_name;
             jsonContent.Text = JsonConvert.SerializeObject(parsedJson, Newtonsoft.Json.Formatting.Indented);
 
         }

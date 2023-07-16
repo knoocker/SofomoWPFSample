@@ -1,4 +1,4 @@
-﻿using SofomoWpfApp1.DataModels;
+﻿using SofomoClient.ServerFacade.DataModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SofomoWpfApp1.Services
+namespace SofomoClient.ServerFacade.Services
 {
-    internal interface IReportsService
+    public interface IReportsService
     {
         Task<List<IpAddressReport>> GetAllIpAddress();
         Task<HttpResponseMessage> CreateIpAddress(string ipAddress);

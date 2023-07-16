@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using Azure.Data.Tables;
 using Azure.Identity;
 using Azure.Storage.Blobs;
-using FunctionApp1.DataModels;
-using FunctionApp1.TableProcessor;
+using SofomoServer.DataModels;
+using SofomoServer.TableProcessor;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -17,7 +17,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 
-namespace FunctionApp1.Functions
+namespace SofomoServer.Functions
 {
     public class ReportService
     {

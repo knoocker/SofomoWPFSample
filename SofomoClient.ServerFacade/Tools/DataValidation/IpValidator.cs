@@ -5,9 +5,9 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SofomoWpfApp1.Tools.DataValidation
+namespace SofomoClient.ServerFacade.Tools.DataValidation
 {
-    internal class IpValidator
+    public class IpValidator
     {
         public static bool IsIpAddressValid(string ipAddress)
         {

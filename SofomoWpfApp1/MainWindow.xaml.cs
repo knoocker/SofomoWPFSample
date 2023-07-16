@@ -1,6 +1,6 @@
-﻿using SofomoWpfApp1.DataModels;
-using SofomoWpfApp1.Services;
-using SofomoWpfApp1.Tools.DataValidation;
+﻿using SofomoClient.ServerFacade.DataModels;
+using SofomoClient.ServerFacade.Services;
+using SofomoClient.ServerFacade.Tools.DataValidation;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,7 +20,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SofomoWpfApp1
+namespace SofomoClient
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -31,9 +31,12 @@ namespace SofomoWpfApp1
         private IReportsService reportsService;
         public ObservableCollection<string> IpAddresses { get; set; }
 
+        IEnumerable<IpAddressReport> ipAdresReports;
+
         public MainWindow()
         {
             InitializeComponent();
+            //TODO dependency injection of this service
             reportsService = new ReportsService();
             RefreshData();
             deleteIp.Visibility = Visibility.Collapsed;
@@ -61,7 +64,6 @@ namespace SofomoWpfApp1
             }
         }
 
-        IEnumerable<IpAddressReport> ipAdresReports;
         private async void RefreshData()
         {
             try
@@ -114,7 +116,7 @@ namespace SofomoWpfApp1
             {
                 deleteIp.Visibility = Visibility.Visible;
                 string ip = (string)ipAddressesList.SelectedItem;
-                IpAddressReport ipAddressReport = ipAdresReports.Where(ipAddress => ipAddress.IpAddress == ip).FirstOrDefault();
+                IpAddressReport ipAddressReport = ipAdresReports.FirstOrDefault(ipAddress => ipAddress.IpAddress == ip);
 
                 ipAddressView.SetIpAddressView(ipAddressReport);
             }

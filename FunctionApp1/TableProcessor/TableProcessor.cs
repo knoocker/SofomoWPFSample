@@ -1,5 +1,5 @@
 ﻿using Azure.Data.Tables;
-using FunctionApp1.DataModels;
+using SofomoServer.DataModels;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FunctionApp1.TableProcessor
+namespace SofomoServer.TableProcessor
 {
     public class TableProcessor:ITableProcessor
     {

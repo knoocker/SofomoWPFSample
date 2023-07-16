@@ -1,4 +1,4 @@
-﻿using SofomoWpfApp1.DataModels;
+﻿using SofomoClient.ServerFacade.DataModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,11 +6,10 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using System.Windows.Documents;
 
-namespace SofomoWpfApp1.Services
+namespace SofomoClient.ServerFacade.Services
 {
-    internal class ReportsService : IReportsService
+    public class ReportsService : IReportsService
     {
 
         protected readonly HttpClient httpClient;

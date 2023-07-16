@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SofomoWpfApp1"
-        xmlns:Components="clr-namespace:SofomoWpfApp1.Components" x:Class="SofomoWpfApp1.MainWindow"
+        xmlns:local="clr-namespace:SofomoClient"
+        xmlns:Components="clr-namespace:SofomoClient.Components" x:Class="SofomoClient.MainWindow"
         mc:Ignorable="d"
         Title="SofomoSampleWPF" Height="608" Width="874">
     <Grid>
