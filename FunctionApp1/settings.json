@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+  },
+  "ServerOptions": {
+    "TableConnectionString": "DefaultEndpointsProtocol=https;AccountName=kktestststorage;AccountKey=3biy0aKX4jlYv8tLI31tguKDURoOefybnz/kQ8rbAjL6i8+cN/yVAUhVXRk+2I3yT+iIMyfs+aGG+AStTcZNvA==;EndpointSuffix=core.windows.net",
+    "TableName": "kktabletest1",
+    "HttpClientBaseUrl": "http://api.ipstack.com/"
+  }
+
+}
