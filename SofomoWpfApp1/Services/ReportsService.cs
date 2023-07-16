@@ -21,9 +21,9 @@ namespace SofomoWpfApp1.Services
 
 
             //TODO - move config to JSON
-          //  httpClient.BaseAddress = new Uri(@"https://kktestfunction2.azurewebsites.net/api/");
+            httpClient.BaseAddress = new Uri(@"https://kktestfunction2.azurewebsites.net/api/");
 
-              httpClient.BaseAddress = new Uri(@"http://localhost:7131/api/");
+          //    httpClient.BaseAddress = new Uri(@"http://localhost:7131/api/");
 
         }
 

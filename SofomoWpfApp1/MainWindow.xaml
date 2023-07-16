@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SofomoWpfApp1"
         xmlns:Components="clr-namespace:SofomoWpfApp1.Components" x:Class="SofomoWpfApp1.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="608" Width="874">
+        Title="SofomoSampleWPF" Height="608" Width="874">
     <Grid>
         <Button x:Name="addIp" Content="Add IP" HorizontalAlignment="Left" Margin="274,10,0,0" VerticalAlignment="Top" Height="28" Width="113" Click="addIp_Click"/>
         <ListBox x:Name="ipAddressesList"  Margin="10,69,0,10" HorizontalAlignment="Left" Width="259" SelectionChanged="ipAddressesList_SelectionChanged"/>
